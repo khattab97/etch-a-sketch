@@ -17,7 +17,6 @@ colorbtn.addEventListener('click', (e) => setMode(e, 'color'));
 rainbowbtn.addEventListener('click', (e) => setMode(e, 'rainbow'));
 erase.addEventListener('click', (e) => setMode(e,'erase'));
 clear.addEventListener('click', (e) => setMode(e,'clear'));
-
 range.addEventListener('change', updateValue);
 colorPick.addEventListener('change', (e) => color = e.target['value']);
 
@@ -60,8 +59,10 @@ function colorPicker(e) {
 }
 
 function setMode(e, mode='color'){
-    if (mode === 'clear') reloadGrid();
-
+    if (mode === 'clear'){
+        reloadGrid();
+        buttons.forEach(button => button.classList.remove('active'));
+    }
     else if (mode !== currentMode){
         buttons.forEach(button => button.classList.remove('active'));
         currentMode = mode;

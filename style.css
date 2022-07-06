@@ -1,13 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
 body, html {
     padding: 0;
     margin: 0;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Lobster' ,"Roboto", sans-serif;
     text-align: center;
     overflow: scroll;
+    background-color: #80D9EA;
+    color: #333;
 }
 
 #header {
     padding: 30px 0;
+    border: 1px solid;
+    box-shadow: 5px 10px 18px #258BB6;
+    font-family: 'Lobster', cursive;
+
 }
 
 #title {
@@ -23,6 +31,10 @@ h1 {
     display: flex;
     justify-content: center;
     gap: 100px;
+    margin: 100px 150px;
+    padding: 35px;
+    border-radius: 11px;
+    background-color: #EDB6C6;
 }
 
 .settings {
@@ -37,6 +49,15 @@ button {
     border-radius: 5px;
     font-size: 22px;
     width: 100%;
+    transition: all;
+    font-family: 'Lobster', cursive;
+    border: 2px solid #6078c3;
+    background-color: white;
+    color: #333;
+}
+
+button:hover {
+    background-color: #B8C6C7;
 }
 
 .grid {
@@ -44,5 +65,18 @@ button {
     flex-direction: column;
     width: 500px;
     height: 500px;
+    background-color: white;
 }
 
+.active {
+    transform: scale(1.02);
+}
+
+
+#color {
+  background-color: #A8B9E1;
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  padding: 5px;
+}
